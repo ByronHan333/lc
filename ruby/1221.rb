@@ -14,7 +14,7 @@ def balanced_string_split(s)
 
   n_str
 end
-s = 'RLRRLLRLRL'
-s = "RLRRRLLRLL"
-s = "LLLLRRRR"
+# s = 'RLRRLLRLRL'
+# s = "RLRRRLLRLL"
+s = 'LLLLRRRR'
 p balanced_string_split(s)
