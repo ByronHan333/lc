@@ -14,18 +14,19 @@ def move_zeroes(nums)
     end
 
     # debugger
-    if nums[non_zero_pointer] == 0 & non_zero_pointer < nums.length - 1
+    if nums[non_zero_pointer] == 0 && non_zero_pointer < nums.length - 1
       non_zero_pointer += 1
       next
     end
 
-    if zero_pointer < non_zero_pointer
+    if zero_pointer <= non_zero_pointer
       swap(nums, zero_pointer, non_zero_pointer)
       zero_pointer += 1
       non_zero_pointer += 1
     end
 
     break if non_zero_pointer == nums.length
+    print "#{zero_pointer}, #{non_zero_pointer} \n"
   end
 
 
@@ -33,6 +34,8 @@ end
 
 nums = [0,1,0,3,12]
 nums = [0]
+nums = [1,0]
+
 p nums
 move_zeroes(nums)
 p nums
